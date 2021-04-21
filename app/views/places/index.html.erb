@@ -1,0 +1,21 @@
+<h1>PLACES</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>longitude</th>
+      <th>latitude</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @places.each do |place| %>
+      <tr>
+        <td><%= place.name %></td>
+        <td><%= place.longitude %></td>
+        <td><%= place.latitude %></td>
+        <td><%= link_to 'show_place', place_path(place) %></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+<%= link_to 'New_place',  new_place_path %>

@@ -1,0 +1,11 @@
+<h1>Show Places</h1>
+<label>Name: <%=@place.name%></label><br>
+<label>Longitude: <%= @place.longitude %></label><br>
+<label>Latitude: <%= @place.latitude %></label>
+<p>
+<%#= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{@place.latitude},#{@place.longitude}&key=#{Rails.application.secrets.google_map_key}", alt: "Map" %>
+  <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=0.22719568e2,0.75857727e2&key=AIzaSyDmW9cXWqdbp3DZuGPE_H9rQr3WGHuZwqo", alt: "Map" %>
+
+</p>
+<%= link_to 'edit',  edit_place_path(@place)%>
+<%= link_to 'back', places_path %>

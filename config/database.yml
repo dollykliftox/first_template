@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: gmap_development
+  pool: 5
+  username: postgres
+  password: 12345678
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: gmap_test
+  pool: 5
+  username: postgres
+  password: 12345678
